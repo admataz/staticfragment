@@ -1,0 +1,36 @@
+{
+  "name": "staticfragment",
+  "version": "1.0.0",
+  "description": "Build multiple variants of a template as static HTML from Handlebars templates and a JSON file",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/admataz/staticfragment.git"
+  },
+  "keywords": [
+    "static",
+    "generator",
+    "handlebars",
+    "template",
+    "variant",
+    "build",
+    "tool"
+  ],
+  "author": "Adam Davis <adam@admataz.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/admataz/staticfragment/issues"
+  },
+  "homepage": "https://github.com/admataz/staticfragment#readme",
+  "dependencies": {
+    "async": "^1.5.2",
+    "commander": "^2.9.0",
+    "fs-extra": "^0.26.7",
+    "handlebars": "^4.0.5",
+    "jsonfile": "^2.2.3",
+    "tape": "^4.5.1"
+  }
+}
