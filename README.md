@@ -5,6 +5,74 @@ Build multiple variants of a template as static HTML from Handlebars templates a
 `npm install -g staticfragment`
 
 
+## Setup
+
+### JSON data file
+ JSON file to define the content for your templates. This should be an object containing a single property `variants` array off the root, which is an array of objects that contain the different data for your template to produce different HTML
+
+e.g.
+``` json
+{
+    "variants": {
+        "default": {
+            "Title": "Default Test",
+            "UI_id": "test-default",
+            "Items": [ {
+                    "FriendlyProductId": "D331729",
+                    "Description": "Item <b>1 Description</b>",
+                    "Image1": "http://example.com/item1-image.jpg",
+                    "Name": "Item 1",
+                    "Price": 85.95,
+                    "ProductDetailsLink": "/item1link",
+                    "New": 1
+                }, {
+                    "FriendlyProductId": "D334611",
+                    "Description": "Item 2 Description",
+                    "Image1": "http://example.com/item2--image.jpg",
+                    "Name": "Item 2",
+                    "Price": 0.0,
+                    "ProductDetailsLink": "/item2link"
+                }
+            ]
+        },
+        "varaint-1": {
+            "Title": "Another Test with a variant",
+            "UI_id": "test-another-variant",
+            "Items": [ {
+                "FriendlyProductId": "D334611",
+                "Description": "Item 1 Description",
+                "Image1": "http://example.com/item1--image.jpg",
+                "Name": "Item 1 - variant 2",
+                "Price": 0.0,
+                "ProductDetailsLink": "/item2link"
+            }
+            ]
+        }
+    }
+}
+```
+
+### [Handlebars.js](http://handlebarsjs.com) template
+Use Handlebars to display the data from the json, and some basic simple logic (`if/else`, `each`)
+
+e.g.
+```handlebars
+<h1>{{ Title }}</h1>
+{{#each Items}}
+  <div>
+    <h2>{{Name}}</h2>
+    <p>
+      {{{ Description}}}
+    </p>
+  </div>
+{{/each}}
+
+```
+
+
+
+
+
 ## Usage
 
 ### Command line

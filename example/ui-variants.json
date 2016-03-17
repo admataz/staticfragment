@@ -5,7 +5,7 @@
             "UI_id": "test-default",
             "Items": [ {
                     "FriendlyProductId": "D331729",
-                    "Description": "Item 1 Description",
+                    "Description": "Item <b>1 Description</b>",
                     "Image1": "http://example.com/item1-image.jpg",
                     "Name": "Item 1",
                     "Price": 85.95,
