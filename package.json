@@ -1,6 +1,6 @@
 {
   "name": "staticfragment",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Build multiple variants of a template as static HTML from Handlebars templates and a JSON file",
   "main": "index.js",
   "scripts": {
