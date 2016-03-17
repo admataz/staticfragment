@@ -32,5 +32,8 @@
     "handlebars": "^4.0.5",
     "jsonfile": "^2.2.3",
     "tape": "^4.5.1"
+  },
+  "bin": {
+    "staticfragment" : "index.js"
   }
 }
