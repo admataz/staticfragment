@@ -83,16 +83,26 @@ Options:
 
   -h, --help             output usage information
   -V, --version          output the version number
-  -o, --output <path>    Output dir path
+  -o, --output [path    Output dir path (optional)
   -j, --json <path>      JSON input
   -t, --template <path>  Handlebars.js template file
   ```
 
+  e.g.
+  ` staticfragment -j ./example/ui-variants.json -t ./example/template.handlebars -o ./build`
+
+returns a JSON encoded object with the compiled HTML for each variant;
+
+
+
   ### API
   ```
   const staticfragment = require('../');
-  staticfragment(json, template,  outputDir, callback);
+  staticfragment(json, template,  [outputDir], callback);
   ```
+
+NOTE: `outputDir` is optional - if you want to write the output to file - otherwise the results are returned as an object, keyed by variant id
+
 
   See the [examples](./example) for json data and templates.
 
